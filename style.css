@@ -388,12 +388,50 @@ main p {
 .contact .contact-resume .resume img {
   border: 1px solid #2e2e2e;
   border-radius: 4px;
+}
+
+.contact .contact-resume .resume .resume-thumbnail {
   margin-bottom: 10px;
 }
 
-.contact .contact-resume .resume img:hover {
+.contact .contact-resume .resume .resume-thumbnail:hover {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
+  cursor: pointer;
+}
+
+.contact .contact-resume .resume .toggle-resume {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 2%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contact .contact-resume .resume .toggle-resume .close-button {
+  position: relative;
+  width: 781px;
+  margin: auto;
+}
+
+.contact .contact-resume .resume .toggle-resume .close-button svg {
+  position: absolute;
+  width: 40px;
+  right: 0;
+  top: -12px;
+}
+
+.contact .contact-resume .resume .toggle-resume .close-button svg:hover {
+  color: darkred;
+  cursor: pointer;
+}
+
+.contact .contact-resume .resume .toggle-resume img {
+  height: 97%;
 }
 
 .contact li {
