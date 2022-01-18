@@ -500,7 +500,8 @@ main {
 @media screen and (min-width: 860px) {
   .divider {
     width: 1px;
-    height: 210vh;
+    height: 800%;
+    max-height: 2300px;
     margin: auto;
     position: absolute;
     left: 50%;
