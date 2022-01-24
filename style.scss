@@ -443,7 +443,6 @@ main {
         position: fixed;
         top: 0;
         left: 0;
-        padding-top: 2%;
         width: 100%;
         height: 100%;
         text-align: center;
@@ -451,14 +450,16 @@ main {
 
         .close-button {
           position: relative;
-          width: 820px;
+          width: 802px;
           margin: auto;
 
           svg {
             position: absolute;
             width: 40px;
-            right: 0;
-            top: -12px;
+            right: -27px;
+            z-index: 100;
+            background: white;
+            border-radius: 50%;
 
             &:hover {
               color: darkred;
@@ -469,6 +470,9 @@ main {
 
         img {
           height: 97%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }
@@ -483,6 +487,8 @@ main {
     i {
       font-size: 35px;
       color: darken($orange, 5%);
+      position: relative;
+      z-index: -1;
 
       &:hover {
         opacity: 70%;
@@ -491,9 +497,27 @@ main {
   }
 }
 
+.remove-click {
+  z-index: -1;
+  position: relative;
+}
+
 @media screen and (min-width: 500px) and (max-width: 860px) {
   .portRight > .growingUpDesc {
     margin-bottom: 58px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .contact .contact-resume .resume .toggle-resume img {
+    height: auto;
+    width: 97%;
+  }
+
+  .toggle-resume > .close-button {
+    position: absolute !important;
+    top: 5px;
+    right: 33px;
   }
 }
 

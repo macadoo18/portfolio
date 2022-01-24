@@ -405,7 +405,6 @@ main p {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 2%;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -414,15 +413,17 @@ main p {
 
 .contact .contact-resume .resume .toggle-resume .close-button {
   position: relative;
-  width: 820px;
+  width: 802px;
   margin: auto;
 }
 
 .contact .contact-resume .resume .toggle-resume .close-button svg {
   position: absolute;
   width: 40px;
-  right: 0;
-  top: -12px;
+  right: -27px;
+  z-index: 100;
+  background: white;
+  border-radius: 50%;
 }
 
 .contact .contact-resume .resume .toggle-resume .close-button svg:hover {
@@ -432,6 +433,10 @@ main p {
 
 .contact .contact-resume .resume .toggle-resume img {
   height: 97%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .contact li {
@@ -444,15 +449,34 @@ main p {
 .contact li i {
   font-size: 35px;
   color: #b55821;
+  position: relative;
+  z-index: -1;
 }
 
 .contact li i:hover {
   opacity: 70%;
 }
 
+.remove-click {
+  z-index: -1;
+  position: relative;
+}
+
 @media screen and (min-width: 500px) and (max-width: 860px) {
   .portRight > .growingUpDesc {
     margin-bottom: 58px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .contact .contact-resume .resume .toggle-resume img {
+    height: auto;
+    width: 97%;
+  }
+  .toggle-resume > .close-button {
+    position: absolute !important;
+    top: 5px;
+    right: 33px;
   }
 }
 

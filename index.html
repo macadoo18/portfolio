@@ -257,7 +257,7 @@
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
-                    onclick="toggleResume()"
+                    onclick="toggleResume();"
                   >
                     <path
                       fill="currentColor"
@@ -265,14 +265,16 @@
                     ></path>
                   </svg>
                 </div>
+
                 <img src="images/ResumeNew.png" alt="Mac's resume" />
               </div>
+
               <img
                 class="resume-thumbnail"
                 src="images/Resume.png"
                 alt="Mac's resume thumbnail"
                 width="50"
-                onclick="toggleResume()"
+                onclick="toggleResume();"
               />
             </div>
           </div>
@@ -289,6 +291,7 @@
             </li>
             <li>
               <a
+                class="social"
                 target="_blank"
                 href="https://www.linkedin.com/in/mac-hale/"
                 aria-label="linkedin link"
@@ -298,6 +301,7 @@
             </li>
             <li>
               <a
+                class="social"
                 target="_blank"
                 href="https://github.com/macadoo18"
                 aria-label="github link"
@@ -307,6 +311,7 @@
             </li>
             <li>
               <a
+                class="social"
                 target="_blank"
                 href="https://twitter.com/MacHale51456448"
                 aria-label="twitter link"
@@ -327,7 +332,19 @@
     <script>
       function toggleResume() {
         $('.toggle-resume').toggle();
+        $('.social').addClass('remove-click');
       }
+
+      $(document).click(e => {
+        if (
+          !$('.toggle-resume img').is(e.target) &&
+          !$('.resume-thumbnail').is(e.target) &&
+          !$('.contact ul li').is(e.target)
+        ) {
+          $('.toggle-resume').hide();
+          $('.social').removeClass('remove-click');
+        }
+      });
     </script>
   </body>
 </html>
